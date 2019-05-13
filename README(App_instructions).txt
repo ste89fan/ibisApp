@@ -1,8 +1,10 @@
-1. Log in :
+1.Install package.json with NPM to get all of the app dependencies
+
+2. Log in :
 - First page you will see is index.php page for Log in users.Type Username - ibis, and password - ibis123 
 so you can successfully Log in.
 
-2. Report page :
+3. Report page :
 - In left corner,in navbar you will see two fields - Mac: address and Contract ID,enter valid data from database.
 - If you enter just Contract Id,you can check for this contract Mac address and also if you enter just Mac Address you can check for his Contract ID.
 This functionality you can test with button near this fields with black circle arrows.
