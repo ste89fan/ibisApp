@@ -9,5 +9,12 @@
 %navDownFields {
     border-color: black;
     border-radius: 50px;
-    padding: 2px 70px;
+    padding: 2px 30px;
+}
+
+%resetAndApplyBtn {
+    background-color: $primary;
+    border-radius: 50px;
+    padding-left: 20px;
+    padding-right: 20px;
 }

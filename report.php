@@ -8,13 +8,95 @@
     <!-- <link rel="stylesheet" href="path/to/easy-autocomplete.min.css"> -->
     <link rel='stylesheet' type='text/css' media='screen' href='css/main.css'>
     <link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/all.css" />
-    
-    
 
 </head>
 <body>
 
-            <div id="sidebar">
+        <div id="sidebar">
+        </div> 
+
+    <div class="container">
+        <div class="row">
+            <header class="w-100">
+                    <nav class="navbar navbar-light bg-light d-flex justify-content-sm-center justify-content-md-between">
+                        <a class="navbar-brand">Report</a>
+                        <form class="form-inline" action="users_model/logout.php">
+                            <button class="btn btn-sm logout-button px-5" type="submit">Logout</button>
+                        </form>
+                    </nav>
+
+                <div class="container">
+                    <div class="row bg-light justify-content-center pb-2">
+                        <div>
+                            <form class="mac-form" action="" method="POST">
+                                <div class="mac-contract-area">
+                                    <div class="row">
+                                        <div class="col-md-4 col-12">
+                                            <label for="mac"><input type="text" name="mac" id="mac" placeholder="Mac: address" class="btn btn-sm nav-down-field mr-sm-0"/></label>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-4 col-12">
+                                            <label for="contract"><input type="text" name="contract" id="contract" placeholder="Contract ID" class="btn btn-sm nav-down-field mr-sm-0"/></label>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="apply-filters-field">
+                                            <button type="button" class="btn btn-link text-dark fas fa-sync-alt mr-2 generate-mac-id"></button>
+                                            <button type="button" class="btn btn-sm apply-filters">Apply filters</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="reset-btn-area">
+                                    <button type="button" class="btn btn-sm reset-filters">Reset filters</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <main class="w-100">               
+                <div class="container highchart-container">
+                    <div class="row pt-5 mb-5">
+                        <div class="col-md-6 col-12">
+                            <div class="card">
+                                <div class="card-body">
+                                    <div id="first-chart" style="min-width: 200px; height: 300px; margin: 0 auto"></div>        
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-12">
+                            <div class="card">
+                                <div class="card-body">
+                                    <div id="second-chart" style="min-width: 200px; height: 300px; margin: 0 auto"></div>        
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 col-12">
+                            <div class="card">
+                                <div class="card-body">
+                                    <div id="third-chart" style="min-width: 200px; height: 300px; margin: 0 auto"></div>       
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card">
+                                <div class="card-body">
+                                    <div id="fourth-chart" style="min-width: 200px; height: 300px; max-width: 600px; margin: 0 auto"></div>        
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+    
+
+            <!-- <div id="sidebar">
             </div>
     <header>
     
@@ -38,40 +120,12 @@
                     </li>
                     <li class="nav-item">
                         <input type="text" name="contract" id="contract" placeholder="Contract ID" class="btn btn-sm nav-down-field mr-5"/>
-                        <!-- <select id="select-section">
-                            <option value="">---</option>
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                        </select>                   -->
-                    </li>
+                        
                     <li class="nav-item apply-filters-field">
                         <button type="button" class="btn btn-link text-dark fas fa-sync-alt mr-2 generate-mac-id"></button>
                         <button type="button" class="btn btn-sm apply-filters">Apply filters</button>
                     </li>
                 </div>
-                <li class="nav-item">
-                <div class="ml-5"></div>
-                </li>
-                <li class="nav-item">
-                <div class="ml-5"></div>
-                </li>
-                <li class="nav-item">
-                <div class="ml-5"></div>
-                </li>
-                <li class="nav-item">
-                <div class="ml-5"></div>
-                </li>
-                <li class="nav-item">
-                <div class="ml-5"></div>
-                </li>
-                <li class="nav-item">
-                <div class="ml-5"></div>
-                </li>
-                <li class="nav-item">
-                <div class="ml-5"></div>
-                </li>
                 <li class="nav-item">
                 <div class="reset-btn-area">
                     <button type="button" class="btn btn-sm reset-filters">Reset filters</button>
@@ -92,6 +146,7 @@
             </li>
         </ul>
     </nav>
+    
 </header>
 
 <main>
@@ -131,7 +186,7 @@
         </div>
     </div>
 
-</main>
+</main> -->
     
     <script src="https://code.highcharts.com/highcharts.js"></script>
     <script src="https://code.highcharts.com/modules/data.js"></script>

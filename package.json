@@ -5,7 +5,7 @@
   "main": "main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "sass --watch css/scss/main.scss css/main.css"
+    "start": "node-sass --watch css/scss/main.scss css/main.css"
   },
   "author": "Stefan",
   "license": "ISC",
@@ -15,6 +15,7 @@
     "popper.js": "^1.15.0"
   },
   "devDependencies": {
-    "@fortawesome/fontawesome-free": "^5.8.1"
+    "@fortawesome/fontawesome-free": "^5.8.1",
+    "node-sass": "^4.5.0"
   }
 }

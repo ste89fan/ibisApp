@@ -47,10 +47,11 @@ html,body {
 }
 
 .apply-filters {
-    background-color: $primary;
-    border-radius: 50px;
-    padding-left: 20px;
-    padding-right: 20px;
+    @extend %resetAndApplyBtn;
+}
+
+.reset-filters {
+    @extend %resetAndApplyBtn;
 }
 
 .lowest-nav-button {

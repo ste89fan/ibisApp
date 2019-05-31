@@ -10,7 +10,7 @@ $(".fa-eye").on("click",function(){
     }
 });
 
-// var LoginBtn = $(".login-button")
+var logOut = $(".logout-button");
 var applyBtn = $(".apply-filters");
 var macField = $("#mac");
 var macForm = $(".mac-form");
@@ -68,15 +68,21 @@ generateMacId.on("click",function(e) {
         })
     })
 
+    
+
     applyBtn.on("click",function() {
-        resetBtnArea.show();
-        applyFilters.hide();
-        macField.hide();
-        contractField.hide();
-        macNavbar.addClass("d-flex flex-row-reverse justify-content-between").append(`<div class='info-data bg-white d-flex flex-column'><span style='color:blue'>Currently viewing data :</span><p>Mac address : <span style='color:blue'>${macField.val()}</span></p><p>Contract ID : <span style='color:blue'>${contractField.val()}</span></p></div>`);
-        macForm.addClass("d-flex justify-content-end");
-        highCharCont.show();
-        ulForFields.removeClass("w-100");
+        if(macField.val()==="" || contractField.val()==="") {
+            location.reload();
+        } else {
+            resetBtnArea.show();
+            applyFilters.hide();
+            macField.hide();
+            contractField.hide();
+            macNavbar.addClass("d-flex flex-row-reverse justify-content-between").append(`<div class='info-data bg-white d-flex flex-column'><span style='color:blue'>Currently viewing data :</span><p>Mac address : <span style='color:blue'>${macField.val()}</span></p><p>Contract ID : <span style='color:blue'>${contractField.val()}</span></p></div>`);
+            macForm.addClass("d-flex justify-content-end");
+            highCharCont.show();
+            ulForFields.removeClass("w-100");
+        }
     })
 
     resetBtnArea.on("click",function() {
@@ -98,7 +104,7 @@ generateMacId.on("click",function(e) {
                 minWidth: 700
             }
         },
-    
+           
         data: {
             csvURL: 'https://cdn.jsdelivr.net/gh/highcharts/highcharts@v7.0.0/samples/data/analytics.csv',
             beforeParse: function (csv) {
